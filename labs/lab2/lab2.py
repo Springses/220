@@ -44,7 +44,7 @@ def means():
 
 
     print("The RMS mean is:", round(rms_mean,3))
-    print("The harmonic mean is: ", harmonic_mean)
+    print("The harmonic mean is: ", round(harmonic_mean,3))
     print("The geometric mean is: ", round(geometric_total,3))
 
 means()
