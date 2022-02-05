@@ -1,30 +1,49 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Elijah Springs
+hw3.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: This is a series of functions that help accumulate grade average, total of tips, calculate a square root
+of a number, and create a sequence of terms. I could not quite figure out how to create the calculation for pi
+unfortunately.
 
 Certification of Authenticity:
-<include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
 
 
 def average():
-    pass
+    grades_amount = eval(input("how many grades will you enter?: "))
+    accumulator = 0
+    for i in range(grades_amount):
+        grade = eval(input("Enter grade: "))
+        accumulator = accumulator + grade
+    grade_average = accumulator / grades_amount
+    print("the average is:", grade_average)
 
 
 def tip_jar():
-    pass
-
+    tip_accumulator = 0
+    for i in range(5):
+        donation = eval(input("how much would you like to donate?"))
+        tip_accumulator = tip_accumulator + donation
+    print("total tips:", tip_accumulator)
 
 def newton():
-    pass
+    sqrt_number = eval(input("what number would you like to square root?"))
+    approx_times = eval(input("how many times should we improve the approximation?"))
+    approx = sqrt_number
+    for i in range(approx_times):
+        approx = (approx + (sqrt_number/approx)) / 2
+    print("the square root is approximately:", approx)
+
 
 
 def sequence():
-    pass
+    terms = eval(input("how many terms would you like?"))
+    for i in range(1,terms+1,2):
+        print(i, end= " ")
+        print(i, end= " ")
+
 
 
 def pi():
