@@ -391,7 +391,7 @@ class ListStream:
     def write(self, s: str):
         if s == '\n':
             return
-        self.data.append(s)
+        self.data += s.split('\n')
 
     def flush(self, *args):
         pass
@@ -531,7 +531,7 @@ def build_IO_string_section(name, tests, expected, dynamic_tests, test_func, tes
             test = Test(test_name, True, False, exception_message='No output',
                         data=[f'inputs: {tests[i]}', f'expected: {ex}'], show_actual_expected=False)
         else:
-            final_output = output[-1]
+            final_output = ''.join(output[2:])
             try:
                 test = Test(test_name, final_output, ex, data=[f'inputs: {tests[i]}'], comp_func=comp_func)
             except:
