@@ -2,7 +2,7 @@
 Name: Elijah Springs
 hw8.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: This program creates a list of sum of sqares originally formatted in a string, and outputs if user inputted circles overlap.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
@@ -14,7 +14,6 @@ import math
 def add_ten(nums):
     newnums = []
     for i in range(len(nums)):
-        # indexes and adds to accumulator
         newnums.append(nums[i] + 10)
     return None
 
@@ -22,7 +21,6 @@ def add_ten(nums):
 def square_each(nums):
     newnumssquared = []
     for i in range(len(nums)):
-        # calculates, indexes, and adds to accumulator
         newnumssquared.append(nums[i] ** 2)
     return newnumssquared
 
